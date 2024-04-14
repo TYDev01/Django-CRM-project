@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background: #011222;
+    /* height: 12vh; */
+}
+
+.login_form{
+    margin-top: 4rem;
+}
+
+.login_submit{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    height: 3rem;
+    background: #011222;
+    color: #fff;
+    font-size: 18px;
+}
+
+.login_submit:hover{
+    background-color: #0b2b49;
+}

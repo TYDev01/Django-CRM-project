@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block content %}
+<div class="col-4 offset-4 login_form">
+  <h2>login</h2>
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <input
+      type="text"
+      class="form-control"
+      placeholder="username"
+      required
+    /><br />
+    <input
+      type="password"
+      class="form-control"
+      placeholder="password"
+      required
+    />
+    <br />
+    <button class="login_submit">login</button>
+    {% comment %}
+    <input
+      type="submit"
+      class="form-control login_submit"
+      value="login"
+      style="background-color: #011222; color: #fff"
+    />
+    {% endcomment %}
+  </form>
+</div>
+{% endblock content %}
