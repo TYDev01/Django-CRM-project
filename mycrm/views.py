@@ -6,19 +6,28 @@ from django.contrib import messages
 def home(request):
     return render(request, 'home.html')
 
-def login(request):
-    if request.method == 'POST':
-        username = request.POST['username'],
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
+
+def login_view(request):
+    if request.method=='POST':
+        username=request.POST['username']
+        password=request.POST['password']
+        user=authenticate(request, username=username, password=password)
         if user is not None:
-            login(request, user)
+            login(request,user)
             messages.success(request, 'Login succesfully')
             return redirect('home')
         else:
-            messages.success(request, 'Account not found')
-            return redirect('login')
+            messages.warning(request, 'Account not found')
+            return redirect('login_view')
     else:
         return render(request, 'login.html')
     
-    return render(request, 'home.html')
+    # return render(request, 'home.html')
+
+
+# Logout function
+
+def logout_user(request):
+    logout(request)
+    messages.success(request,"logout successfully.")
+    return redirect('home')

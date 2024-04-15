@@ -3,9 +3,9 @@
 {% block content %}
 
     {% if user.is_authenticated %}
-        <h2>Welcome name</h2>
-        {% else %}
-        <h1>Welcome to the Homepage</h1>
+    <h2>Welcome {{user.username}}</h2>
+    {% else %}
+    <h1>Welcome to the Homepage</h1>
     {% endif %}
     
 {% endblock content %}

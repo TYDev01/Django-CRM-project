@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 <div class="col-4 offset-4 login_form">
   <h2>login</h2>
-  <form method="post" action="{% url 'login' %}">
+  <form method="post" action="{% url 'login_view' %}">
     {% csrf_token %}
     <input
       type="text"
