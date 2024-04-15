@@ -26,3 +26,8 @@
 .login_submit:hover{
     background-color: #0b2b49;
 }
+
+.register_form [input]{
+    margin-bottom: 3rem;
+    border: 3px solid #000;
+}
